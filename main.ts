@@ -29,8 +29,8 @@ input.onButtonPressed(Button.B, function() {
 // Shows if randomNumber1 is bigger or smaller than randomNumber2
 input.onGesture(Gesture.Shake, function() {
     if (randomNumber1 > randomNumber2) {
-        basic.showString(randomNumber1 + '>' + randomNumber2)
+        basic.showString(randomNumber1 + ">" + randomNumber2)
         } else {
-        basic.showString(randomNumber1 + '<' + randomNumber2)
+        basic.showString(randomNumber1 + "<" + randomNumber2)
         }
 })
