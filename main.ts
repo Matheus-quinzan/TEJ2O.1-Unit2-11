@@ -2,7 +2,7 @@
  *
  * Created by: Matheus
  * Created on: Oct 2025
- * This program gets randomNumbers 
+ * This program gets and Shows randomNumbers 
 */
 
 // variables
