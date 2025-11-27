@@ -7,30 +7,33 @@
 
 // variables
 
-let randomNumber1 : number = randint(0, 99)
-let randomNumber2 : number = randint(0, 99)
+let randomNumber1: number = randint(0, 99)
+let randomNumber2: number = randint(0, 99)
 
-// setup
+// Setup
 basic.clearScreen()
 basic.showIcon(IconNames.Happy)
 
 // Shows randomNumber1
-input.onButtonPressed(Button.A, function() {
+input.onButtonPressed(Button.A, function () {
     basic.clearScreen()
     basic.showNumber(randomNumber1)
 })
 
 // Shows randomNumber2
-input.onButtonPressed(Button.B, function() {
+input.onButtonPressed(Button.B, function () {
     basic.clearScreen()
     basic.showNumber(randomNumber2)
 })
 
 // Shows if randomNumber1 is bigger or smaller than randomNumber2
-input.onGesture(Gesture.Shake, function() {
+input.onGesture(Gesture.Shake, function () {
+    basic.clearScreen()
     if (randomNumber1 > randomNumber2) {
-        basic.showString(randomNumber1 + ">" + randomNumber2)
-        } else {
-        basic.showString(randomNumber1 + "<" + randomNumber2)
-        }
+        basic.showString(randomNumber1.toString() + ">" + randomNumber2.toString())
+    } else if (randomNumber1 < randomNumber2) {
+        basic.showString(randomNumber1.toString() + "<" + randomNumber2.toString())
+    } else {
+        basic.showString(randomNumber1.toString() + "=" + randomNumber2.toString())
+    }
 })
